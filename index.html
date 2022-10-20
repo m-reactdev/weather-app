@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="bg-weather" id="bg-waether">
+    <div class="container">
+      <a href="index.html" class="logo">Weather App</a>
+      <div class="weather-info">
+        <h1 id="tempreture">31<sup>o</sup><span>C</span></h1>
+        <div class="name-date">
+          <h2 id="city-name">Karachi</h2>
+          <div class="flex-box">
+            <p id="timePicker"></p>
+            <p id="datePicker"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="searchBar">
+        <input type="text" id="input" onchange="getWeather(this.value)" autocomplete="off" />
+        <a href="javascript:;" class="searchIcon"><i class="ri-search-line"></i></a>
+
+        <a href="javascript:;" id="close" onclick="closeIcon()"><i class="ri-close-line"></i></a>
+      </div>
+
+      <ul class="cities" id="cities"></ul>
+
+      <ul class="weather-details">
+        <h4>Weather Details</h4>
+        <li>
+          <span>Condition</span>
+          <span id="condition">Clear</span>
+        </li>
+        <li>
+          <span>Wind</span>
+          <span id="wind">10km/h</span>
+        </li>
+        <li>
+          <span>Humidity</span>
+          <span id="humidity">75%</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="error-box" id="error-box">
+      <h3>Error Found:</h3>
+      <p id="error-text"></p>
+    </div>
+  </div>
+
+  <script src="custom.js"></script>
+</body>
+
+</html>
